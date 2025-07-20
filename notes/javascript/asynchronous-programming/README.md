@@ -64,10 +64,6 @@ JS callback, promise, async await explained
 
 JavaScript single-threaded behavior
 
-✅ Here's your complete README file:
-
-👉 [Click here to download README.md](./README.md)
-
 Feel free to explore each linked topic to deepen your understanding!
 
 
