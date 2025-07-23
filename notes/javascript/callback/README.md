@@ -147,3 +147,8 @@ JavaScript introduced Promises and async/await to fix the limitations of callbac
 | Error Handling  | 😖 Messy                   | 😎 `try...catch` support      |
 | Control Flow    | 😫 Nested (Pyramid code)   | 😊 Sequential & Clean         |
 
+## 📚 Recommended Reading
+
+- [Asynchronous Programming](../asynchronous-programming//README.md)  
+- [Promises](../promises/README.md)  
+- [Async/Await](../async-await/Readme.md)
