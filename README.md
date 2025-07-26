@@ -13,7 +13,8 @@ Whether it's frontend, backend, DevOps, or full-stack concepts — this lab help
 | Asynchronous Programming   | Core concepts of async programming in JavaScript   | [📖 View Notes](./notes/javascript/asynchronous-programming/README.md)|
 | Callback Functions         | Introduction to callbacks in JavaScript            | [📖 View Notes](./notes/javascript/callback/README.md)               |
 | Promises                   | Understanding JavaScript Promises                  | [📖 View Notes](./notes/javascript/promises/README.md)               |
-| Async/Await                | Cleaner async code using async/await syntax        | [📖 View Notes](./notes/javascript/async-await/README.md)            |
+| Async/Await                | Cleaner async code using async/await syntax        | [📖 View Notes](./notes/javascript/async-await/README.md)  
+| Context vs Zustand         | Difference between context and zustand        | [📖 View Notes](./notes//React/context-vs-state-management-library/README.md)           |
 | More coming soon...        | More learning topics will be added gradually.      | —                                                                    |
 
 
