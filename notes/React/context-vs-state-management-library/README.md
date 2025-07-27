@@ -20,10 +20,10 @@ React Context API is not a state management library — it is a Dependency Injec
 
 - Provides global access to shared, static-like data
 - Ideal for low-frequency updates like:
-- Theme toggling
-- Auth context
-- User settings
-- Render UI 
+  - Theme toggling
+  - Auth context
+  - User settings
+  - Render UI 
 
 ❌ Limitations When Used for State Management:
 
@@ -191,3 +191,22 @@ Zustand fills that gap with:
 ✅ Optimal performance
 
 For modern apps where state grows in complexity — Zustand is your go-to tool.
+
+## 🏷️ Relevant Keywords
+
+`zustand vs context`, `react state management`, `zustand vs redux`,  
+`scalable state in react`, `react context re-render`, `global state react`,  
+`when to use zustand`, `zustand performance`, `react async state management`,  
+`react context api limitations`, `zustand react example`, `lightweight state management react`,  
+`async state in zustand`, `zustand vs redux vs context`, `react store management`,  
+`react shared state`, `react app architecture`, `modular state management react`,  
+`dependency injection react`, `context api vs zustand performance`,  
+`why zustand is better than context api for state management`,  
+`zustand vs context api for large-scale react apps`,  
+`how to manage global state with zustand in react`,  
+`best way to handle async state in react`,  
+`performance comparison between zustand and context api`,  
+`zustand store setup react`, `real-time state updates react`,  
+`multi-step form state in react`, `dashboard widget state management react`,  
+`theme toggling react context`, `authentication state react`, `localization in react context api`
+
