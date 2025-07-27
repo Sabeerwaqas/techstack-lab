@@ -1,6 +1,6 @@
-![React Context API vs Zustand](https://miro.medium.com/v2/resize:fit:1400/1*9OlSw4-7vIc3tiCaIqJ7kA.jpeg)
 
-*Visual comparison: React Context API vs Zustand performance and architecture*
+<img width="1536" height="1024" alt="ChatGPT Image Jul 27, 2025, 02_46_49 PM" src="https://github.com/user-attachments/assets/aaf36d9b-daff-4f52-8a69-3e60bf8e0fa0" />
+
 
 # React Context API vs Zustand — Why Zustand is Better for Scalable State Management
 
