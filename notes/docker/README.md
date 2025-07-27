@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="ChatGPT Image Jul 27, 2025, 05_03_59 PM" src="https://github.com/user-attachments/assets/6022b2d8-a0fd-4846-9113-78ea3207a394" />
+
 # 🚢 What is Docker? 
 
 Docker is a tool that helps us build, share, and run applications in a consistent environment — no matter where the app is running or what operating system it’s on.
