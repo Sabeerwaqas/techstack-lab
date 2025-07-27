@@ -18,33 +18,70 @@ React Context API is not a state management library — it is a Dependency Injec
 
 ✅ What Context Does Well:
 
-Provides global access to shared, static-like data
-
-Ideal for low-frequency updates like:
-
-Theme toggling
-
-Auth context
-
-User settings
-
-Render UI 
+- Provides global access to shared, static-like data
+- Ideal for low-frequency updates like:
+- Theme toggling
+- Auth context
+- User settings
+- Render UI 
 
 ❌ Limitations When Used for State Management:
 
-Requires multiple useState or useReducer calls for different slices of state
+- Requires multiple useState or useReducer calls for different slices of state
+- Mixes UI logic with state logic (e.g. loading, error, data)
+- Re-renders the entire subtree on any state change
+- Difficult to test, reuse, and scale effectively
 
-Mixes UI logic with state logic (e.g. loading, error, data)
 
-Re-renders the entire subtree on any state change
+## ❗ Example: Context Re-renders Entire Subtree
 
-Difficult to test, reuse, and scale effectively
+When you change any value in Context, **all consuming components re-render** — even if they don’t use the updated value.
+
+```jsx
+// ThemeContext.js
+import { createContext, useContext, useState } from 'react';
+
+const ThemeContext = createContext();
+
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState('light');
+  const [count, setCount] = useState(0); // extra state to demonstrate re-render
+
+  return (
+    <ThemeContext.Provider value={{ theme, setTheme, count, setCount }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
+export const useTheme = () => useContext(ThemeContext);
+```
+```jsx
+// ComponentA.js
+import { useTheme } from './ThemeContext';
+
+export const ComponentA = () => {
+  const { theme } = useTheme();
+  console.log('Component A Rendered');
+  return <div>Current Theme: {theme}</div>;
+};
+
+// ComponentB.js
+import { useTheme } from './ThemeContext';
+
+export const ComponentB = () => {
+  const { count, setCount } = useTheme();
+  console.log('Component B Rendered');
+  return <button onClick={() => setCount(count + 1)}>Click Me</button>;
+};
+```
+Even though ComponentA only uses theme, it re-renders every time count is updated in ComponentB.
 
 🔹 Can Context Handle Async?
 
 Yes, async functions can be added inside a context provider:
 
-```
+```js
 const fetchTodos = async () => {
   setLoading(true);
   try {
@@ -59,13 +96,10 @@ const fetchTodos = async () => {
 ```
 But It Has Drawbacks:
 
-Requires multiple states (loading, data, error, etc.)
-
-Context provider becomes bloated
-
-Poor separation of concerns
-
-Reusability is low, and testing becomes harder
+- Requires multiple states (loading, data, error, etc.)
+- Context provider becomes bloated
+- Poor separation of concerns
+- Reusability is low, and testing becomes harder
 
 🔹 What is Zustand?
 
@@ -73,15 +107,11 @@ Zustand is a lightweight, fast, and scalable state management library for React,
 
 ✅ Why Zustand Is Better:
 
-Zero boilerplate (no actions, reducers, thunks)
-
-Async actions work out of the box
-
-Encourages centralized and modular store logic
-
-Only re-renders components that use the updated slice of state
-
-Works seamlessly with TypeScript
+- Zero boilerplate (no actions, reducers, thunks)
+- Async actions work out of the box
+- Encourages centralized and modular store logic
+- Only re-renders components that use the updated slice of state
+- Works seamlessly with TypeScript
 
 ```
 import { create } from 'zustand';
@@ -105,13 +135,10 @@ const useTodoStore = create((set) => ({
 ```
 ✅ Zustand Benefits:
 
-set() simplifies updates — no reducers required
-
-Logic is centralized and easy to maintain
-
-Works without middleware like Redux Thunk
-
-Component performance is optimized via selective reactivity
+- ```set()``` simplifies updates — no reducers required
+- Logic is centralized and easy to maintain
+- Works without middleware like Redux Thunk
+- Component performance is optimized via selective reactivity
 
 🧠 A Note on Dependency Injection (DI)
 
@@ -119,8 +146,8 @@ Context API is a Dependency Injection tool, not a state manager.
 
 Think of it like this:
 
-You don’t cook every time you need food — you use a delivery service to provide it.
-Similarly, Context injects dependencies (like services or values) into components. It’s not designed to manage dynamic state with frequent updates.
+***You don’t cook every time you need food — you use a delivery service to provide it.
+Similarly, Context injects dependencies (like services or values) into components. It’s not designed to manage dynamic state with frequent updates.***
 
 So while Context helps provide values globally, it’s not intended for scalable and reactive state logic — that’s where Zustand shines.
 
