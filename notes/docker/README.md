@@ -69,3 +69,118 @@ Run the following command to test Docker:
 ```
 docker run hello-world
 ```
+
+## 🧪 Common Docker Commands (with Simple Examples)
+
+Here are some essential Docker commands with beginner-friendly examples:
+
+### 📥 `docker pull IMAGE_NAME`
+Downloads an image from Docker Hub.
+
+```bash
+docker pull hello-world
+```
+Downloads the hello-world image — used to verify Docker is working.
+
+### 📸 `docker images`
+
+Lists all Docker images stored on your system.
+
+```bash
+docker images
+```
+Shows all downloaded images like ```hello-world```, ```alpine```, etc.
+
+### ▶️ ```docker run IMAGE_NAME```
+
+Runs a container from an image.
+
+```bash
+docker run hello-world
+```
+
+Runs a basic container that prints a confirmation message.
+
+### 🖥️ ```docker run -it IMAGE_NAME```
+
+Runs a container in interactive mode (with terminal access).
+
+```bash
+docker run -it alpine
+```
+Launches the Alpine Linux image. Inside the container, you can try commands like ls, echo, apk add, etc.
+
+### 🛑 ```docker stop CONTAINER_NAME or CONTAINER_ID```
+
+Stops a running container.
+
+```bash
+docker stop amazing_bhaskara
+```
+
+Stops the container named ```amazing_bhaskara```.
+
+### ▶️ ```docker start CONTAINER_NAME or CONTAINER_ID```
+
+Starts an existing (stopped) container.
+
+```docker start amazing_bhaskara```
+
+### 📦 ```docker ps```
+
+Lists all running containers.
+
+```bash
+docker ps
+```
+
+### 📦 ```docker ps -a```
+
+Lists all containers (running and stopped).
+
+```bash
+docker ps -a
+```
+
+### 🗑️ ```docker rmi IMAGE_NAME```
+
+Deletes an image from your system.
+
+```bash
+docker rmi hello-world
+```
+
+### 🗑️ ```docker rm CONTAINER_NAME```
+
+Removes a container.
+
+```bash
+docker rm amazing_bhaskara
+```
+
+## 🔁 Summary Table (Beginner-Friendly)
+
+| Command                      | Description                                     |
+|-----------------------------|-------------------------------------------------|
+| `docker pull hello-world`   | Download the test image                         |
+| `docker run hello-world`    | Run a simple test container                     |
+| `docker run -it alpine`     | Start Alpine in terminal mode                  |
+| `docker ps`                 | List running containers                         |
+| `docker ps -a`              | List all containers (including stopped ones)    |
+| `docker stop <container>`   | Stop a container                                |
+| `docker start <container>`  | Start a stopped container                       |
+| `docker rm <container>`     | Remove a container                              |
+| `docker rmi <image>`        | Remove an image                                 |
+| `docker images`             | List all downloaded images                      |
+
+
+
+
+
+
+
+
+
+
+
+
