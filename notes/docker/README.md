@@ -1,4 +1,4 @@
-# 🚢 What is Docker? Why Do We Need It?
+# 🚢 What is Docker? 
 
 Docker is a tool that helps us build, share, and run applications in a consistent environment — no matter where the app is running or what operating system it’s on.
 
